@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My landing page</title>
+  <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+  <!-- We need this line below for responsiveness! -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="banner">
+      <h1 class="banner-title">Le Wagon brings tech skills to creative people!</h1>
+      <h2 class="banner-subheading">Change your life and learn to code at one of our campuses around the world.</h2>
+      <button class="banner-btn"><a href="#">Apply now!</a></button>
+    </header>
+    <section class="how-to">
+      <div class="card">
+        <img src="./images/apply.svg" alt="" class="card-img">
+        <h2 class="cart-title">Apply</h2>
+        <p class="card-desc">Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="card">
+        <img src="./images/learn.svg" alt="" class="card-img">
+        <h2 class="cart-title">Learn to code</h2>
+        <p class="card-desc">Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="card">
+        <img src="./images/product.svg" alt="" class="card-img">
+        <h2 class="cart-title">Build products</h2>
+        <p class="card-desc">Lorem ipsum dolor sit amet.</p>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="social">
+        <a href="#"><i class="fab fa-fw fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-fw fa-github"></i></a>
+        <a href="#"><i class="fab fa-fw fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-fw fa-instagram"></i></a>
+      </div>
+      <p class="footer-text">This website was coded with 💜 at Le Wagon.</p>
+    </footer>
+  </main>
+  <script>
+    document.querySelector('.banner-btn').onmousemove = evt => {
+      const x = evt.pageX - evt.target.offsetLeft;
+      const y = evt.pageY - evt.target.offsetTop;
+
+      evt.target.style.setProperty( '--x', `${x}px`);
+      evt.target.style.setProperty( '--y', `${y}px`);
+    }
+  </script>
+</body>
+</html>

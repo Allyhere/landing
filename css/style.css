@@ -1,0 +1,106 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:700");
+
+/* Fontawesome */
+@import url("https://use.fontawesome.com/releases/v5.6.3/css/all.css");
+
+
+@import url("./components/buttons.css");
+@import url("./components/cards.css");
+/* Utilities */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --clr-main: #fafafa;
+  --clr-secondary: #2c2b2b;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Poppins;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80vh minmax(50vh, 2fr) 30vh;
+  grid-template-areas: "banner" "content" "bottom";
+}
+
+.banner {
+  grid-area: banner;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4),
+      rgba(231, 183, 78, 0.3)
+    ),
+    url("../images/background.png") no-repeat center / cover;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 0 16px;
+  color: var(--clr-main);
+}
+
+.banner > * + * { margin-top: 20px; }
+
+.banner-title {
+  font-size: 2rem;
+  width: 80%;
+}
+
+.banner-subheading {
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.how-to {
+  grid-area: content;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding: 20px;
+}
+
+.footer {
+  grid-area: bottom;
+  background-color: var(--clr-secondary);
+  display: grid;
+  place-items: center;
+}
+
+.social > a {
+  font-size: 2.5rem;
+  color: #1EDD88;
+  transition: color .3s ease-in;
+}
+
+.social > a:hover {
+  color: #11a763;
+}
+.footer-text {
+  align-self: flex-start;
+  color: var(--clr-main);
+}
+
+
+/* Custom design below! */
